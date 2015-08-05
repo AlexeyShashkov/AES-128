@@ -3,4 +3,4 @@ My own AES-128 Encryption/Decryption IP Core in VHDL for Xilinx FPGAs. Implement
 Design documents are available in Russian only.
 
 src/ directory contains only AES-128 encryption IP.
-Other implementations are available in {docs_russian/Исходные описания и отчёты}
+Other implementations are available in {doc/Исходные описания и отчёты}
