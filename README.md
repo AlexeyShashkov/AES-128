@@ -1,5 +1,6 @@
 # AES-128 IP Core for Xilinx FPGAs (in VHDL)
-My own AES-128 Encryption/Decryption IP Core in VHDL for Xilinx FPGAs. Implements a fast itarative architecture: each AES-round takes 1 clock to process data.
+My own AES-128 Encryption/Decryption IP Cores in VHDL for Xilinx FPGAs. Cores implement several distinct fast itarative architectures.
+
 Design documents are available in Russian only.
 
 {src/} directory contains only AES-128 encryption IP (one of several implementations). The other implementations are available in {doc/Исходные описания и отчёты}
