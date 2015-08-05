@@ -1,0 +1,197 @@
+Release 13.4 par O.87xd (nt64)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+
+ALEXEY-PC::  Fri Mar 09 21:21:41 2012
+
+par -w -intstyle ise -ol high -xe c -mt 4 Main_map.ncd Main.ncd Main.pcf 
+
+
+Constraints file: Main.pcf.
+Loading device for application Rf_Device from file '6vlx75t.nph' in environment C:\Xilinx\13.4\ISE_DS\ISE\.
+   "Main" is an NCD, version 3.2, device xc6vlx75t, package ff784, speed -3
+INFO:Par:338 - 
+   Extra Effort Level "c"ontinue is not a runtime optimized effort level. It is intended to be used for designs that are
+   not meeting timing but where the designer wants the tools to continue iterating on the design until no further design
+   speed improvements are possible.  This can result in very long runtimes since the tools will continue improving the
+   design even if the time specs can not be met. If you are looking for the best possible design speed available from a
+   long but reasonable runtime use Extra Effort Level "n"ormal.  It will stop iterating on the design when the design
+   speed improvements have shrunk to the point that the time specs are not expected to be met.
+
+Initializing temperature to 85.000 Celsius. (default - Range: 0.000 to 85.000 Celsius)
+Initializing voltage to 0.950 Volts. (default - Range: 0.950 to 1.050 Volts)
+
+
+Device speed data version:  "PRODUCTION 1.17 2012-01-07".
+
+
+
+Device Utilization Summary:
+
+Slice Logic Utilization:
+  Number of Slice Registers:                   652 out of  93,120    1%
+    Number used as Flip Flops:                 652
+    Number used as Latches:                      0
+    Number used as Latch-thrus:                  0
+    Number used as AND/OR logics:                0
+  Number of Slice LUTs:                      2,341 out of  46,560    5%
+    Number used as logic:                    2,258 out of  46,560    4%
+      Number using O6 output only:           2,226
+      Number using O5 output only:               0
+      Number using O5 and O6:                   32
+      Number used as ROM:                        0
+    Number used as Memory:                      64 out of  16,720    1%
+      Number used as Dual Port RAM:              0
+      Number used as Single Port RAM:           64
+        Number using O6 output only:             0
+        Number using O5 output only:             0
+        Number using O5 and O6:                 64
+      Number used as Shift Register:             0
+    Number used exclusively as route-thrus:     19
+      Number with same-slice register load:     19
+      Number with same-slice carry load:         0
+      Number with other load:                    0
+
+Slice Logic Distribution:
+  Number of occupied Slices:                   694 out of  11,640    5%
+  Number of LUT Flip Flop pairs used:        2,550
+    Number with an unused Flip Flop:         1,984 out of   2,550   77%
+    Number with an unused LUT:                 209 out of   2,550    8%
+    Number of fully used LUT-FF pairs:         357 out of   2,550   14%
+    Number of slice register sites lost
+      to control set restrictions:               0 out of  93,120    0%
+
+  A LUT Flip Flop pair for this architecture represents one LUT paired with
+  one Flip Flop within a slice.  A control set is a unique combination of
+  clock, reset, set, and enable signals for a registered element.
+  The Slice Logic Distribution report is not meaningful if the design is
+  over-mapped for a non-slice resource or if Placement fails.
+  OVERMAPPING of BRAM resources should be ignored if the design is
+  over-mapped for a non-BRAM resource or if placement fails.
+
+IO Utilization:
+  Number of bonded IOBs:                       261 out of     360   72%
+
+Specific Feature Utilization:
+  Number of RAMB36E1/FIFO36E1s:                  0 out of     156    0%
+  Number of RAMB18E1/FIFO18E1s:                  0 out of     312    0%
+  Number of BUFG/BUFGCTRLs:                      1 out of      32    3%
+    Number used as BUFGs:                        1
+    Number used as BUFGCTRLs:                    0
+  Number of ILOGICE1/ISERDESE1s:                 0 out of     360    0%
+  Number of OLOGICE1/OSERDESE1s:                 0 out of     360    0%
+  Number of BSCANs:                              0 out of       4    0%
+  Number of BUFHCEs:                             0 out of      72    0%
+  Number of BUFIODQSs:                           0 out of      36    0%
+  Number of BUFRs:                               0 out of      18    0%
+  Number of CAPTUREs:                            0 out of       1    0%
+  Number of DSP48E1s:                            0 out of     288    0%
+  Number of EFUSE_USRs:                          0 out of       1    0%
+  Number of FRAME_ECCs:                          0 out of       1    0%
+  Number of GTXE1s:                              0 out of      12    0%
+  Number of IBUFDS_GTXE1s:                       0 out of       6    0%
+  Number of ICAPs:                               0 out of       2    0%
+  Number of IDELAYCTRLs:                         0 out of       9    0%
+  Number of IODELAYE1s:                          0 out of     360    0%
+  Number of MMCM_ADVs:                           0 out of       6    0%
+  Number of PCIE_2_0s:                           0 out of       1    0%
+  Number of STARTUPs:                            1 out of       1  100%
+  Number of SYSMONs:                             0 out of       1    0%
+  Number of TEMAC_SINGLEs:                       0 out of       4    0%
+
+
+Overall effort level (-ol):   High 
+Router effort level (-rl):    High 
+
+PAR will use up to 4 processors
+Starting Multi-threaded Router
+
+
+Phase  1  : 17900 unrouted;      REAL time: 7 secs 
+
+Phase  2  : 17340 unrouted;      REAL time: 8 secs 
+
+Phase  3  : 2536 unrouted;      REAL time: 11 secs 
+
+Phase  4  : 2703 unrouted; (Setup:331, Hold:431, Component Switching Limit:0)     REAL time: 14 secs 
+
+Updating file: Main.ncd with current fully routed design.
+
+Phase  5  : 0 unrouted; (Setup:1139, Hold:402, Component Switching Limit:0)     REAL time: 17 secs 
+
+Phase  6  : 0 unrouted; (Setup:1063, Hold:402, Component Switching Limit:0)     REAL time: 18 secs 
+
+Phase  7  : 0 unrouted; (Setup:686, Hold:402, Component Switching Limit:0)     REAL time: 1 mins 3 secs 
+
+Phase  8  : 0 unrouted; (Setup:686, Hold:402, Component Switching Limit:0)     REAL time: 1 mins 3 secs 
+
+Phase  9  : 0 unrouted; (Setup:686, Hold:402, Component Switching Limit:0)     REAL time: 1 mins 3 secs 
+
+Updating file: Main.ncd with current fully routed design.
+
+Phase 10  : 0 unrouted; (Setup:402, Hold:402, Component Switching Limit:0)     REAL time: 1 mins 4 secs 
+
+Phase 11  : 0 unrouted; (Setup:402, Hold:0, Component Switching Limit:0)     REAL time: 1 mins 4 secs 
+
+Phase 12  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 1 mins 5 secs 
+Total REAL time to Router completion: 1 mins 5 secs 
+Total CPU time to Router completion (all processors): 1 mins 13 secs 
+
+Generating "PAR" statistics.
+
+**************************
+Generating Clock Report
+**************************
+
++---------------------+--------------+------+------+------------+-------------+
+|        Clock Net    |   Resource   |Locked|Fanout|Net Skew(ns)|Max Delay(ns)|
++---------------------+--------------+------+------+------------+-------------+
+|           CLK_BUFGP | BUFGCTRL_X0Y0| No   |  198 |  0.193     |  1.551      |
++---------------------+--------------+------+------+------------+-------------+
+
+* Net Skew is the difference between the minimum and maximum routing
+only delays for the net. Note this is different from Clock Skew which
+is reported in TRCE timing report. Clock Skew is the difference between
+the minimum and maximum path delays which includes logic delays.
+
+* The fanout is the number of component pins not the individual BEL loads,
+for example SLICE loads not FF loads.
+
+Timing Score: 0 (Setup: 0, Hold: 0, Component Switching Limit: 0)
+
+Asterisk (*) preceding a constraint indicates it was not met.
+   This may be due to a setup or hold violation.
+
+----------------------------------------------------------------------------------------------------------
+  Constraint                                |    Check    | Worst Case |  Best Case | Timing |   Timing   
+                                            |             |    Slack   | Achievable | Errors |    Score   
+----------------------------------------------------------------------------------------------------------
+  TS_CLK = PERIOD TIMEGRP "CLK" 3.435 ns HI | SETUP       |     0.028ns|     3.407ns|       0|           0
+  GH 50%                                    | HOLD        |     0.101ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+
+
+All constraints were met.
+
+
+Generating Pad Report.
+
+All signals are completely routed.
+
+Total REAL time to PAR completion: 1 mins 6 secs 
+Total CPU time to PAR completion (all processors): 1 mins 14 secs 
+
+Peak Memory Usage:  587 MB
+
+Placer: Placement generated during map.
+Routing: Completed - No errors found.
+Timing: Completed - No errors found.
+
+Number of error messages: 0
+Number of warning messages: 0
+Number of info messages: 1
+
+Writing design to file Main.ncd
+
+
+
+PAR done!

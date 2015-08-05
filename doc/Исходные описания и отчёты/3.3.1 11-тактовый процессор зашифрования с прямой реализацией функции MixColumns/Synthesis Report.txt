@@ -1,0 +1,760 @@
+Release 13.4 - xst O.87xd (nt64)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.07 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.07 secs
+ 
+--> Reading design: Main.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "Main.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "Main"
+Output Format                      : NGC
+Target Device                      : xc5vlx30-3-ff676
+
+---- Source Options
+Top Module Name                    : Main
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Speed1
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Distributed
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Distributed
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 32
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : NO
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 2
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+Setting FSM Encoding Algorithm to : Speed1
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "F:/Dropbox/Diploma thesis/ISE Projects/iterative/Xtime.vhd" in Library work.
+Architecture xtime_architecture of Entity xtime is up to date.
+Compiling vhdl file "F:/Dropbox/Diploma thesis/ISE Projects/iterative/S_Box.vhd" in Library work.
+Architecture s_box_architecture of Entity s_box is up to date.
+Compiling vhdl file "F:/Dropbox/Diploma thesis/ISE Projects/iterative/Rcon_zero_row.vhd" in Library work.
+Architecture rcon_zero_row_architecture of Entity rcon_zero_row is up to date.
+Compiling vhdl file "F:/Dropbox/Diploma thesis/ISE Projects/iterative/SubBytes.vhd" in Library work.
+Architecture subbytes_architecture of Entity subbytes is up to date.
+Compiling vhdl file "F:/Dropbox/Diploma thesis/ISE Projects/iterative/ShiftRows.vhd" in Library work.
+Architecture shiftrows_architecture of Entity shiftrows is up to date.
+Compiling vhdl file "F:/Dropbox/Diploma thesis/ISE Projects/iterative/MixColumns.vhd" in Library work.
+Architecture mixcolumns_architecture of Entity mixcolumns is up to date.
+Compiling vhdl file "F:/Dropbox/Diploma thesis/ISE Projects/iterative/AddRoundKey.vhd" in Library work.
+Architecture addroundkey_architecture of Entity addroundkey is up to date.
+Compiling vhdl file "F:/Dropbox/Diploma thesis/ISE Projects/iterative/KeyScheduleRAM.vhd" in Library work.
+Architecture keyscheduleram_architecture of Entity keyscheduleram is up to date.
+Compiling vhdl file "F:/Dropbox/Diploma thesis/ISE Projects/iterative/Reg_128_EN.vhd" in Library work.
+Architecture reg_128_en_architecture of Entity reg_128_en is up to date.
+Compiling vhdl file "F:/Dropbox/Diploma thesis/ISE Projects/iterative/RoundEncryptDecrypt.vhd" in Library work.
+Architecture roundencryptdecrypt_architecture of Entity roundencryptdecrypt is up to date.
+Compiling vhdl file "F:/Dropbox/Diploma thesis/ISE Projects/iterative/Counter_to_10.vhd" in Library work.
+Architecture counter_to_10_architecture of Entity counter_to_10 is up to date.
+Compiling vhdl file "F:/Dropbox/Diploma thesis/ISE Projects/iterative/KeySchedule.vhd" in Library work.
+Architecture keyschedule_architecture of Entity keyschedule is up to date.
+Compiling vhdl file "F:/Dropbox/Diploma thesis/ISE Projects/iterative/MUX_128_2.vhd" in Library work.
+Architecture mux_128_2_architecture of Entity mux_128_2 is up to date.
+Compiling vhdl file "F:/Dropbox/Diploma thesis/ISE Projects/iterative/Main.vhd" in Library work.
+Architecture main_architecture of Entity main is up to date.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <Main> in library <work> (architecture <main_architecture>).
+
+Analyzing hierarchy for entity <KeyScheduleRAM> in library <work> (architecture <keyscheduleram_architecture>).
+
+Analyzing hierarchy for entity <Reg_128_EN> in library <work> (architecture <reg_128_en_architecture>).
+
+Analyzing hierarchy for entity <RoundEncryptDecrypt> in library <work> (architecture <roundencryptdecrypt_architecture>).
+
+Analyzing hierarchy for entity <Counter_to_10> in library <work> (architecture <counter_to_10_architecture>).
+
+Analyzing hierarchy for entity <KeySchedule> in library <work> (architecture <keyschedule_architecture>).
+
+Analyzing hierarchy for entity <MUX_128_2> in library <work> (architecture <mux_128_2_architecture>).
+
+Analyzing hierarchy for entity <SubBytes> in library <work> (architecture <subbytes_architecture>).
+
+Analyzing hierarchy for entity <ShiftRows> in library <work> (architecture <shiftrows_architecture>).
+
+Analyzing hierarchy for entity <MixColumns> in library <work> (architecture <mixcolumns_architecture>).
+
+Analyzing hierarchy for entity <AddRoundKey> in library <work> (architecture <addroundkey_architecture>).
+
+Analyzing hierarchy for entity <Rcon_zero_row> in library <work> (architecture <rcon_zero_row_architecture>).
+
+Analyzing hierarchy for entity <S_Box> in library <work> (architecture <s_box_architecture>).
+
+Analyzing hierarchy for entity <Xtime> in library <work> (architecture <xtime_architecture>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <Main> in library <work> (Architecture <main_architecture>).
+Entity <Main> analyzed. Unit <Main> generated.
+
+Analyzing Entity <KeyScheduleRAM> in library <work> (Architecture <keyscheduleram_architecture>).
+Entity <KeyScheduleRAM> analyzed. Unit <KeyScheduleRAM> generated.
+
+Analyzing Entity <Reg_128_EN> in library <work> (Architecture <reg_128_en_architecture>).
+Entity <Reg_128_EN> analyzed. Unit <Reg_128_EN> generated.
+
+Analyzing Entity <RoundEncryptDecrypt> in library <work> (Architecture <roundencryptdecrypt_architecture>).
+Entity <RoundEncryptDecrypt> analyzed. Unit <RoundEncryptDecrypt> generated.
+
+Analyzing Entity <SubBytes> in library <work> (Architecture <subbytes_architecture>).
+Entity <SubBytes> analyzed. Unit <SubBytes> generated.
+
+Analyzing Entity <S_Box> in library <work> (Architecture <s_box_architecture>).
+Entity <S_Box> analyzed. Unit <S_Box> generated.
+
+Analyzing Entity <ShiftRows> in library <work> (Architecture <shiftrows_architecture>).
+Entity <ShiftRows> analyzed. Unit <ShiftRows> generated.
+
+Analyzing Entity <MixColumns> in library <work> (Architecture <mixcolumns_architecture>).
+Entity <MixColumns> analyzed. Unit <MixColumns> generated.
+
+Analyzing Entity <Xtime> in library <work> (Architecture <xtime_architecture>).
+Entity <Xtime> analyzed. Unit <Xtime> generated.
+
+Analyzing Entity <AddRoundKey> in library <work> (Architecture <addroundkey_architecture>).
+Entity <AddRoundKey> analyzed. Unit <AddRoundKey> generated.
+
+Analyzing Entity <Counter_to_10> in library <work> (Architecture <counter_to_10_architecture>).
+Entity <Counter_to_10> analyzed. Unit <Counter_to_10> generated.
+
+Analyzing Entity <KeySchedule> in library <work> (Architecture <keyschedule_architecture>).
+Entity <KeySchedule> analyzed. Unit <KeySchedule> generated.
+
+Analyzing Entity <Rcon_zero_row> in library <work> (Architecture <rcon_zero_row_architecture>).
+Entity <Rcon_zero_row> analyzed. Unit <Rcon_zero_row> generated.
+
+Analyzing Entity <MUX_128_2> in library <work> (Architecture <mux_128_2_architecture>).
+INFO:Xst:1561 - "F:/Dropbox/Diploma thesis/ISE Projects/iterative/MUX_128_2.vhd" line 22: Mux is complete : default of case is discarded
+Entity <MUX_128_2> analyzed. Unit <MUX_128_2> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <KeyScheduleRAM>.
+    Related source file is "F:/Dropbox/Diploma thesis/ISE Projects/iterative/KeyScheduleRAM.vhd".
+    Found 16x128-bit single-port RAM <Mram_RAM> for signal <RAM>.
+    Summary:
+	inferred   1 RAM(s).
+Unit <KeyScheduleRAM> synthesized.
+
+
+Synthesizing Unit <Reg_128_EN>.
+    Related source file is "F:/Dropbox/Diploma thesis/ISE Projects/iterative/Reg_128_EN.vhd".
+    Found 128-bit register for signal <tmp>.
+    Summary:
+	inferred 128 D-type flip-flop(s).
+Unit <Reg_128_EN> synthesized.
+
+
+Synthesizing Unit <Counter_to_10>.
+    Related source file is "F:/Dropbox/Diploma thesis/ISE Projects/iterative/Counter_to_10.vhd".
+    Found 4-bit up counter for signal <tmp>.
+    Summary:
+	inferred   1 Counter(s).
+Unit <Counter_to_10> synthesized.
+
+
+Synthesizing Unit <MUX_128_2>.
+    Related source file is "F:/Dropbox/Diploma thesis/ISE Projects/iterative/MUX_128_2.vhd".
+Unit <MUX_128_2> synthesized.
+
+
+Synthesizing Unit <ShiftRows>.
+    Related source file is "F:/Dropbox/Diploma thesis/ISE Projects/iterative/ShiftRows.vhd".
+Unit <ShiftRows> synthesized.
+
+
+Synthesizing Unit <AddRoundKey>.
+    Related source file is "F:/Dropbox/Diploma thesis/ISE Projects/iterative/AddRoundKey.vhd".
+    Found 128-bit xor2 for signal <output>.
+Unit <AddRoundKey> synthesized.
+
+
+Synthesizing Unit <S_Box>.
+    Related source file is "F:/Dropbox/Diploma thesis/ISE Projects/iterative/S_Box.vhd".
+    Found 256x8-bit ROM for signal <output>.
+    Summary:
+	inferred   1 ROM(s).
+Unit <S_Box> synthesized.
+
+
+Synthesizing Unit <Xtime>.
+    Related source file is "F:/Dropbox/Diploma thesis/ISE Projects/iterative/Xtime.vhd".
+Unit <Xtime> synthesized.
+
+
+Synthesizing Unit <Rcon_zero_row>.
+    Related source file is "F:/Dropbox/Diploma thesis/ISE Projects/iterative/Rcon_zero_row.vhd".
+    Found 16x8-bit ROM for signal <output>.
+    Summary:
+	inferred   1 ROM(s).
+Unit <Rcon_zero_row> synthesized.
+
+
+Synthesizing Unit <KeySchedule>.
+    Related source file is "F:/Dropbox/Diploma thesis/ISE Projects/iterative/KeySchedule.vhd".
+    Found 8-bit xor2 for signal <rk<0:7>>.
+    Found 8-bit xor2 for signal <rk<8>>.
+    Found 119-bit xor2 for signal <rk<9:127>>.
+    Summary:
+	inferred   8 Xor(s).
+Unit <KeySchedule> synthesized.
+
+
+Synthesizing Unit <SubBytes>.
+    Related source file is "F:/Dropbox/Diploma thesis/ISE Projects/iterative/SubBytes.vhd".
+Unit <SubBytes> synthesized.
+
+
+Synthesizing Unit <MixColumns>.
+    Related source file is "F:/Dropbox/Diploma thesis/ISE Projects/iterative/MixColumns.vhd".
+    Found 10-bit xor2 for signal <w<0:9>>.
+    Found 10-bit xor2 for signal <w<10>>.
+    Found 15-bit xor4 for signal <w<11:25>>.
+    Found 15-bit xor4 for signal <w<26>>.
+    Found 5-bit xor2 for signal <w<27:31>>.
+    Found 5-bit xor2 for signal <w<32>>.
+    Found 15-bit xor4 for signal <w<33:47>>.
+    Found 15-bit xor4 for signal <w<48>>.
+    Found 20-bit xor2 for signal <w<49:68>>.
+    Found 20-bit xor2 for signal <w<69>>.
+    Found 4-bit xor2 for signal <w<70:73>>.
+    Found 4-bit xor2 for signal <w<74>>.
+    Found 10-bit xor4 for signal <w<75:84>>.
+    Found 10-bit xor4 for signal <w<85>>.
+    Found 4-bit xor4 for signal <w<86:89>>.
+    Found 4-bit xor4 for signal <w<90>>.
+    Found 5-bit xor2 for signal <w<91:95>>.
+    Found 5-bit xor2 for signal <w<96>>.
+    Found 12-bit xor4 for signal <w<97:108>>.
+    Found 12-bit xor4 for signal <w<109>>.
+    Found 15-bit xor2 for signal <w<110:124>>.
+    Found 15-bit xor2 for signal <w<125>>.
+    Found 2-bit xor2 for signal <w<126:127>>.
+    Found 1-bit xor3 for signal <w_10$xor0000> created at line 47.
+    Found 1-bit xor2 for signal <w_10$xor0001> created at line 47.
+    Found 1-bit xor3 for signal <w_100$xor0000> created at line 36.
+    Found 1-bit xor2 for signal <w_100$xor0001> created at line 36.
+    Found 1-bit xor2 for signal <w_101$xor0000> created at line 36.
+    Found 1-bit xor2 for signal <w_102$xor0000> created at line 36.
+    Found 1-bit xor2 for signal <w_103$xor0000> created at line 36.
+    Found 1-bit xor2 for signal <w_104$xor0000> created at line 47.
+    Found 1-bit xor2 for signal <w_105$xor0000> created at line 47.
+    Found 1-bit xor2 for signal <w_106$xor0000> created at line 47.
+    Found 1-bit xor2 for signal <w_107$xor0000> created at line 47.
+    Found 1-bit xor2 for signal <w_108$xor0000> created at line 47.
+    Found 1-bit xor3 for signal <w_11$xor0000> created at line 47.
+    Found 1-bit xor2 for signal <w_11$xor0001> created at line 47.
+    Found 1-bit xor3 for signal <w_12$xor0000> created at line 47.
+    Found 1-bit xor2 for signal <w_12$xor0001> created at line 47.
+    Found 1-bit xor3 for signal <w_125$xor0000> created at line 69.
+    Found 1-bit xor2 for signal <w_125$xor0001> created at line 69.
+    Found 1-bit xor3 for signal <w_126$xor0000> created at line 69.
+    Found 1-bit xor2 for signal <w_126$xor0001> created at line 69.
+    Found 1-bit xor3 for signal <w_127$xor0000> created at line 69.
+    Found 1-bit xor2 for signal <w_127$xor0001> created at line 69.
+    Found 1-bit xor3 for signal <w_13$xor0000> created at line 47.
+    Found 1-bit xor2 for signal <w_13$xor0001> created at line 47.
+    Found 1-bit xor3 for signal <w_14$xor0000> created at line 47.
+    Found 1-bit xor2 for signal <w_14$xor0001> created at line 47.
+    Found 1-bit xor3 for signal <w_15$xor0000> created at line 47.
+    Found 1-bit xor2 for signal <w_15$xor0001> created at line 47.
+    Found 1-bit xor3 for signal <w_16$xor0000> created at line 58.
+    Found 1-bit xor2 for signal <w_16$xor0001> created at line 58.
+    Found 1-bit xor3 for signal <w_17$xor0000> created at line 58.
+    Found 1-bit xor2 for signal <w_17$xor0001> created at line 58.
+    Found 1-bit xor2 for signal <w_18$xor0000> created at line 58.
+    Found 1-bit xor2 for signal <w_19$xor0000> created at line 58.
+    Found 1-bit xor2 for signal <w_20$xor0000> created at line 58.
+    Found 1-bit xor2 for signal <w_21$xor0000> created at line 58.
+    Found 1-bit xor2 for signal <w_22$xor0000> created at line 58.
+    Found 1-bit xor2 for signal <w_23$xor0000> created at line 58.
+    Found 1-bit xor2 for signal <w_24$xor0000> created at line 69.
+    Found 1-bit xor2 for signal <w_25$xor0000> created at line 69.
+    Found 1-bit xor3 for signal <w_32$xor0000> created at line 36.
+    Found 1-bit xor2 for signal <w_32$xor0001> created at line 36.
+    Found 1-bit xor3 for signal <w_33$xor0000> created at line 36.
+    Found 1-bit xor2 for signal <w_33$xor0001> created at line 36.
+    Found 1-bit xor3 for signal <w_34$xor0000> created at line 36.
+    Found 1-bit xor2 for signal <w_34$xor0001> created at line 36.
+    Found 1-bit xor3 for signal <w_35$xor0000> created at line 36.
+    Found 1-bit xor2 for signal <w_35$xor0001> created at line 36.
+    Found 1-bit xor3 for signal <w_36$xor0000> created at line 36.
+    Found 1-bit xor2 for signal <w_36$xor0001> created at line 36.
+    Found 1-bit xor3 for signal <w_37$xor0000> created at line 36.
+    Found 1-bit xor2 for signal <w_37$xor0001> created at line 36.
+    Found 1-bit xor3 for signal <w_38$xor0000> created at line 36.
+    Found 1-bit xor2 for signal <w_38$xor0001> created at line 36.
+    Found 1-bit xor3 for signal <w_39$xor0000> created at line 36.
+    Found 1-bit xor2 for signal <w_39$xor0001> created at line 36.
+    Found 1-bit xor2 for signal <w_40$xor0000> created at line 47.
+    Found 1-bit xor2 for signal <w_41$xor0000> created at line 47.
+    Found 1-bit xor2 for signal <w_42$xor0000> created at line 47.
+    Found 1-bit xor2 for signal <w_43$xor0000> created at line 47.
+    Found 1-bit xor2 for signal <w_44$xor0000> created at line 47.
+    Found 1-bit xor2 for signal <w_45$xor0000> created at line 47.
+    Found 1-bit xor2 for signal <w_46$xor0000> created at line 47.
+    Found 1-bit xor2 for signal <w_47$xor0000> created at line 47.
+    Found 1-bit xor3 for signal <w_69$xor0000> created at line 36.
+    Found 1-bit xor2 for signal <w_69$xor0001> created at line 36.
+    Found 1-bit xor3 for signal <w_74$xor0000> created at line 47.
+    Found 1-bit xor2 for signal <w_74$xor0001> created at line 47.
+    Found 1-bit xor3 for signal <w_75$xor0000> created at line 47.
+    Found 1-bit xor2 for signal <w_75$xor0001> created at line 47.
+    Found 1-bit xor3 for signal <w_76$xor0000> created at line 47.
+    Found 1-bit xor2 for signal <w_76$xor0001> created at line 47.
+    Found 1-bit xor2 for signal <w_77$xor0000> created at line 47.
+    Found 1-bit xor3 for signal <w_78$xor0000> created at line 47.
+    Found 1-bit xor2 for signal <w_78$xor0001> created at line 47.
+    Found 1-bit xor3 for signal <w_79$xor0000> created at line 47.
+    Found 1-bit xor2 for signal <w_79$xor0001> created at line 47.
+    Found 1-bit xor3 for signal <w_80$xor0000> created at line 58.
+    Found 1-bit xor2 for signal <w_80$xor0001> created at line 58.
+    Found 1-bit xor3 for signal <w_81$xor0000> created at line 58.
+    Found 1-bit xor2 for signal <w_81$xor0001> created at line 58.
+    Found 1-bit xor2 for signal <w_82$xor0000> created at line 58.
+    Found 1-bit xor2 for signal <w_83$xor0000> created at line 58.
+    Found 1-bit xor2 for signal <w_84$xor0000> created at line 58.
+    Found 1-bit xor2 for signal <w_86$xor0000> created at line 58.
+    Found 1-bit xor2 for signal <w_87$xor0000> created at line 58.
+    Found 1-bit xor2 for signal <w_88$xor0000> created at line 69.
+    Found 1-bit xor2 for signal <w_89$xor0000> created at line 69.
+    Found 1-bit xor3 for signal <w_96$xor0000> created at line 36.
+    Found 1-bit xor2 for signal <w_96$xor0001> created at line 36.
+    Found 1-bit xor3 for signal <w_97$xor0000> created at line 36.
+    Found 1-bit xor2 for signal <w_97$xor0001> created at line 36.
+    Found 1-bit xor3 for signal <w_98$xor0000> created at line 36.
+    Found 1-bit xor2 for signal <w_98$xor0001> created at line 36.
+    Found 1-bit xor3 for signal <w_99$xor0000> created at line 36.
+    Found 1-bit xor2 for signal <w_99$xor0001> created at line 36.
+    Summary:
+	inferred  96 Xor(s).
+Unit <MixColumns> synthesized.
+
+
+Synthesizing Unit <RoundEncryptDecrypt>.
+    Related source file is "F:/Dropbox/Diploma thesis/ISE Projects/iterative/RoundEncryptDecrypt.vhd".
+Unit <RoundEncryptDecrypt> synthesized.
+
+
+Synthesizing Unit <Main>.
+    Related source file is "F:/Dropbox/Diploma thesis/ISE Projects/iterative/Main.vhd".
+    Found finite state machine <FSM_0> for signal <state>.
+    -----------------------------------------------------------------------
+    | States             | 6                                              |
+    | Transitions        | 11                                             |
+    | Inputs             | 2                                              |
+    | Outputs            | 8                                              |
+    | Clock              | CLK                       (rising_edge)        |
+    | Reset              | RESET_reg                 (positive)           |
+    | Reset type         | synchronous                                    |
+    | Reset State        | i_0                                            |
+    | Power Up State     | i_0                                            |
+    | Encoding           | speed1                                         |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 1-bit register for signal <AVAILABLE>.
+    Found 1-bit register for signal <reg_DATA_WRITE>.
+    Found 1-bit register for signal <RESET_reg>.
+    Found 1-bit register for signal <tmp_AVAILABLE>.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred   4 D-type flip-flop(s).
+Unit <Main> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 1
+ 16x128-bit single-port RAM                            : 1
+# ROMs                                                 : 21
+ 16x8-bit ROM                                          : 1
+ 256x8-bit ROM                                         : 20
+# Counters                                             : 1
+ 4-bit up counter                                      : 1
+# Registers                                            : 8
+ 1-bit register                                        : 4
+ 128-bit register                                      : 4
+# Xors                                                 : 353
+ 1-bit xor2                                            : 248
+ 1-bit xor3                                            : 40
+ 1-bit xor4                                            : 64
+ 128-bit xor2                                          : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Optimizing FSM <state/FSM> on signal <state[1:8]> with speed1 encoding.
+-------------------
+ State | Encoding
+-------------------
+ i_0   | 10000000
+ i_1   | 01000000
+ i_2   | 00100010
+ s_0   | 00010000
+ s_0_2 | 00001011
+ s_1   | 00000111
+-------------------
+
+Synthesizing (advanced) Unit <KeyScheduleRAM>.
+INFO:Xst:3216 - HDL ADVISOR - LUT implementation is currently selected for the RAM <Mram_RAM>. If you want the register to be removed and the RAM to be implemented as block RAM, please change the RAM implementation style accordingly.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 128-bit                   |          |
+    |     clkA           | connected to signal <CLK>           | rise     |
+    |     weA            | connected to signal <WE>            | high     |
+    |     addrA          | connected to signal <ADDRESS>       |          |
+    |     diA            | connected to signal <INPUT>         |          |
+    |     doA            | connected to signal <OUTPUT>        |          |
+    -----------------------------------------------------------------------
+Unit <KeyScheduleRAM> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# FSMs                                                 : 1
+# RAMs                                                 : 1
+ 16x128-bit single-port distributed RAM                : 1
+# ROMs                                                 : 21
+ 16x8-bit ROM                                          : 1
+ 256x8-bit ROM                                         : 20
+# Counters                                             : 1
+ 4-bit up counter                                      : 1
+# Registers                                            : 516
+ Flip-Flops                                            : 516
+# Xors                                                 : 353
+ 1-bit xor2                                            : 248
+ 1-bit xor3                                            : 40
+ 1-bit xor4                                            : 64
+ 128-bit xor2                                          : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <Main> ...
+
+Optimizing unit <Reg_128_EN> ...
+
+Optimizing unit <MixColumns> ...
+
+Optimizing unit <KeySchedule> ...
+
+Optimizing unit <RoundEncryptDecrypt> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block Main, actual ratio is 7.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 528
+ Flip-Flops                                            : 528
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : Main.ngr
+Top Level Output File Name         : Main
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 260
+
+Cell Usage :
+# BELS                             : 1590
+#      GND                         : 1
+#      INV                         : 1
+#      LUT2                        : 54
+#      LUT3                        : 11
+#      LUT4                        : 37
+#      LUT5                        : 118
+#      LUT6                        : 883
+#      MUXF7                       : 325
+#      MUXF8                       : 160
+# FlipFlops/Latches                : 528
+#      FD                          : 4
+#      FDE                         : 512
+#      FDR                         : 7
+#      FDRE                        : 4
+#      FDS                         : 1
+# RAMS                             : 128
+#      RAM32X1S                    : 128
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 259
+#      IBUF                        : 130
+#      OBUF                        : 129
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 5vlx30ff676-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             528  out of  19200     2%  
+ Number of Slice LUTs:                 1232  out of  19200     6%  
+    Number used as Logic:              1104  out of  19200     5%  
+    Number used as Memory:              128  out of   5120     2%  
+       Number used as RAM:              128
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:   1453
+   Number with an unused Flip Flop:     925  out of   1453    63%  
+   Number with an unused LUT:           221  out of   1453    15%  
+   Number of fully used LUT-FF pairs:   307  out of   1453    21%  
+   Number of unique control sets:         7
+
+IO Utilization: 
+ Number of IOs:                         260
+ Number of bonded IOBs:                 260  out of    400    65%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     32     3%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+CLK                                | BUFGP                  | 656   |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 3.251ns (Maximum Frequency: 307.613MHz)
+   Minimum input arrival time before clock: 0.929ns
+   Maximum output required time after clock: 2.775ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'CLK'
+  Clock period: 3.251ns (frequency: 307.613MHz)
+  Total number of paths / destination ports: 31050 / 1694
+-------------------------------------------------------------------------
+Delay:               3.251ns (Levels of Logic = 6)
+  Source:            main3/tmp_53 (FF)
+  Destination:       main3/tmp_107 (FF)
+  Source Clock:      CLK rising
+  Destination Clock: CLK rising
+
+  Data Path: main3/tmp_53 to main3/tmp_107
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q             33   0.396   0.939  main3/tmp_53 (main3/tmp_53)
+     LUT6:I0->O            1   0.086   0.000  main2/en_1_generate_for_each_byte[6].substitute/Mrom_output142 (main2/en_1_generate_for_each_byte[6].substitute/Mrom_output142)
+     MUXF7:I1->O           1   0.214   0.000  main2/en_1_generate_for_each_byte[6].substitute/Mrom_output14_f7_0 (main2/en_1_generate_for_each_byte[6].substitute/Mrom_output14_f71)
+     MUXF8:I0->O          10   0.161   0.470  main2/en_1_generate_for_each_byte[6].substitute/Mrom_output14_f8 (main2/b0<48>)
+     LUT2:I0->O            2   0.086   0.365  main2/en_3/w<108>21 (main2/en_3/w<108>_bdd2)
+     LUT6:I5->O            1   0.086   0.361  main2/en_3/w<116>1 (main2/b2<116>)
+     LUT6:I5->O            1   0.086   0.000  main2/en_6/Mxor_output_Result<11>1 (w2<116>)
+     FDE:D                    -0.022          main3/tmp_116
+    ----------------------------------------
+    Total                      3.251ns (1.115ns logic, 2.136ns route)
+                                       (34.3% logic, 65.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'CLK'
+  Total number of paths / destination ports: 130 / 130
+-------------------------------------------------------------------------
+Offset:              0.929ns (Levels of Logic = 1)
+  Source:            RESET (PAD)
+  Destination:       RESET_reg (FF)
+  Destination Clock: CLK rising
+
+  Data Path: RESET to RESET_reg
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   0.694   0.235  RESET_IBUF (RESET_IBUF)
+     FD:D                     -0.022          RESET_reg
+    ----------------------------------------
+    Total                      0.929ns (0.694ns logic, 0.235ns route)
+                                       (74.7% logic, 25.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK'
+  Total number of paths / destination ports: 129 / 129
+-------------------------------------------------------------------------
+Offset:              2.775ns (Levels of Logic = 1)
+  Source:            AVAILABLE (FF)
+  Destination:       AVAILABLE (PAD)
+  Source Clock:      CLK rising
+
+  Data Path: AVAILABLE to AVAILABLE
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               1   0.396   0.235  AVAILABLE (AVAILABLE_OBUF)
+     OBUF:I->O                 2.144          AVAILABLE_OBUF (AVAILABLE)
+    ----------------------------------------
+    Total                      2.775ns (2.540ns logic, 0.235ns route)
+                                       (91.5% logic, 8.5% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 16.00 secs
+Total CPU time to Xst completion: 16.03 secs
+ 
+--> 
+
+Total memory usage is 384116 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    2 (   0 filtered)
+

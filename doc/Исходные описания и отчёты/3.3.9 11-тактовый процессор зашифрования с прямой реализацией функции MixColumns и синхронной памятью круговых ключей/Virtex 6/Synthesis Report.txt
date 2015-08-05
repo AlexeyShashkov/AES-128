@@ -1,0 +1,645 @@
+Release 13.4 - xst O.87xd (nt64)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.07 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.07 secs
+ 
+--> Reading design: Main.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "Main.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "Main"
+Output Format                      : NGC
+Target Device                      : xc6vlx75t-3-ff784
+
+---- Source Options
+Top Module Name                    : Main
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Speed1
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Distributed
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Distributed
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 32
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+INFO:Xst - Part-select index evaluated to out of bound value may lead to incorrect synthesis results; it is recommended not to use them in RTL
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "F:\Dropbox\Diploma thesis\ISE Projects\iterative\project_v6\__source\Xtime.vhd" into library work
+Parsing entity <Xtime>.
+Parsing architecture <Xtime_architecture> of entity <xtime>.
+Parsing VHDL file "F:\Dropbox\Diploma thesis\ISE Projects\iterative\project_v6\__source\S_Box.vhd" into library work
+Parsing entity <S_Box>.
+Parsing architecture <S_Box_architecture> of entity <s_box>.
+Parsing VHDL file "F:\Dropbox\Diploma thesis\ISE Projects\iterative\project_v6\__source\SubBytes.vhd" into library work
+Parsing entity <SubBytes>.
+Parsing architecture <SubBytes_architecture> of entity <subbytes>.
+Parsing VHDL file "F:\Dropbox\Diploma thesis\ISE Projects\iterative\project_v6\__source\ShiftRows.vhd" into library work
+Parsing entity <ShiftRows>.
+Parsing architecture <ShiftRows_architecture> of entity <shiftrows>.
+Parsing VHDL file "F:\Dropbox\Diploma thesis\ISE Projects\iterative\project_v6\__source\Rcon_zero_row.vhd" into library work
+Parsing entity <Rcon_zero_row>.
+Parsing architecture <Rcon_zero_row_architecture> of entity <rcon_zero_row>.
+Parsing VHDL file "F:\Dropbox\Diploma thesis\ISE Projects\iterative\project_v6\__source\MixColumns.vhd" into library work
+Parsing entity <MixColumns>.
+Parsing architecture <MixColumns_architecture> of entity <mixcolumns>.
+Parsing VHDL file "F:\Dropbox\Diploma thesis\ISE Projects\iterative\project_v6\__source\AddRoundKey.vhd" into library work
+Parsing entity <AddRoundKey>.
+Parsing architecture <AddRoundKey_architecture> of entity <addroundkey>.
+Parsing VHDL file "F:\Dropbox\Diploma thesis\ISE Projects\iterative\project_v6\__source\RoundEncryptDecrypt.vhd" into library work
+Parsing entity <RoundEncryptDecrypt>.
+Parsing architecture <RoundEncryptDecrypt_architecture> of entity <roundencryptdecrypt>.
+Parsing VHDL file "F:\Dropbox\Diploma thesis\ISE Projects\iterative\project_v6\__source\Reg_128_EN.vhd" into library work
+Parsing entity <Reg_128_EN>.
+Parsing architecture <Reg_128_EN_architecture> of entity <reg_128_en>.
+Parsing VHDL file "F:\Dropbox\Diploma thesis\ISE Projects\iterative\project_v6\__source\MUX_128_2.vhd" into library work
+Parsing entity <MUX_128_2>.
+Parsing architecture <MUX_128_2_architecture> of entity <mux_128_2>.
+Parsing VHDL file "F:\Dropbox\Diploma thesis\ISE Projects\iterative\project_v6\__source\KeyScheduleRAM.vhd" into library work
+Parsing entity <KeyScheduleRAM>.
+Parsing architecture <KeyScheduleRAM_architecture> of entity <keyscheduleram>.
+Parsing VHDL file "F:\Dropbox\Diploma thesis\ISE Projects\iterative\project_v6\__source\KeySchedule.vhd" into library work
+Parsing entity <KeySchedule>.
+Parsing architecture <KeySchedule_architecture> of entity <keyschedule>.
+Parsing VHDL file "F:\Dropbox\Diploma thesis\ISE Projects\iterative\project_v6\__source\Counter_to_10.vhd" into library work
+Parsing entity <Counter_to_10>.
+Parsing architecture <Counter_to_10_architecture> of entity <counter_to_10>.
+Parsing VHDL file "F:\Dropbox\Diploma thesis\ISE Projects\iterative\project_v6\__source\Main.vhd" into library work
+Parsing entity <Main>.
+Parsing architecture <Main_architecture> of entity <main>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <Main> (architecture <Main_architecture>) from library <work>.
+
+Elaborating entity <KeyScheduleRAM> (architecture <KeyScheduleRAM_architecture>) from library <work>.
+
+Elaborating entity <Reg_128_EN> (architecture <Reg_128_EN_architecture>) from library <work>.
+
+Elaborating entity <RoundEncryptDecrypt> (architecture <RoundEncryptDecrypt_architecture>) from library <work>.
+
+Elaborating entity <SubBytes> (architecture <SubBytes_architecture>) from library <work>.
+
+Elaborating entity <S_Box> (architecture <S_Box_architecture>) from library <work>.
+INFO:HDLCompiler:679 - "F:\Dropbox\Diploma thesis\ISE Projects\iterative\project_v6\__source\S_Box.vhd" Line 276. Case statement is complete. others clause is never selected
+
+Elaborating entity <ShiftRows> (architecture <ShiftRows_architecture>) from library <work>.
+
+Elaborating entity <MixColumns> (architecture <MixColumns_architecture>) from library <work>.
+
+Elaborating entity <Xtime> (architecture <Xtime_architecture>) from library <work>.
+
+Elaborating entity <AddRoundKey> (architecture <AddRoundKey_architecture>) from library <work>.
+
+Elaborating entity <Counter_to_10> (architecture <Counter_to_10_architecture>) from library <work>.
+
+Elaborating entity <KeySchedule> (architecture <KeySchedule_architecture>) from library <work>.
+
+Elaborating entity <Rcon_zero_row> (architecture <Rcon_zero_row_architecture>) from library <work>.
+
+Elaborating entity <MUX_128_2> (architecture <MUX_128_2_architecture>) from library <work>.
+INFO:HDLCompiler:679 - "F:\Dropbox\Diploma thesis\ISE Projects\iterative\project_v6\__source\MUX_128_2.vhd" Line 24. Case statement is complete. others clause is never selected
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <Main>.
+    Related source file is "f:/dropbox/diploma thesis/ise projects/iterative/project_v6/__source/main.vhd".
+    Found 1-bit register for signal <reg_DATA_WRITE>.
+    Found 1-bit register for signal <tmp_AVAILABLE>.
+    Found 1-bit register for signal <AVAILABLE>.
+    Found 3-bit register for signal <state>.
+    Found 1-bit register for signal <RESET_reg>.
+    Found finite state machine <FSM_0> for signal <state>.
+    -----------------------------------------------------------------------
+    | States             | 6                                              |
+    | Transitions        | 11                                             |
+    | Inputs             | 3                                              |
+    | Outputs            | 7                                              |
+    | Clock              | CLK (rising_edge)                              |
+    | Reset              | RESET_reg (positive)                           |
+    | Reset type         | synchronous                                    |
+    | Reset State        | i_0                                            |
+    | Power Up State     | i_0                                            |
+    | Encoding           | Speed1                                         |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Summary:
+	inferred   4 D-type flip-flop(s).
+	inferred  16 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
+Unit <Main> synthesized.
+
+Synthesizing Unit <KeyScheduleRAM>.
+    Related source file is "f:/dropbox/diploma thesis/ise projects/iterative/project_v6/__source/keyscheduleram.vhd".
+    Found 16x128-bit single-port RAM <Mram_RAM> for signal <RAM>.
+    Found 128-bit register for signal <OUTPUT>.
+    Summary:
+	inferred   1 RAM(s).
+	inferred 128 D-type flip-flop(s).
+Unit <KeyScheduleRAM> synthesized.
+
+Synthesizing Unit <Reg_128_EN>.
+    Related source file is "f:/dropbox/diploma thesis/ise projects/iterative/project_v6/__source/reg_128_en.vhd".
+    Found 128-bit register for signal <tmp>.
+    Summary:
+	inferred 128 D-type flip-flop(s).
+Unit <Reg_128_EN> synthesized.
+
+Synthesizing Unit <RoundEncryptDecrypt>.
+    Related source file is "f:/dropbox/diploma thesis/ise projects/iterative/project_v6/__source/roundencryptdecrypt.vhd".
+    Summary:
+	inferred   2 Multiplexer(s).
+Unit <RoundEncryptDecrypt> synthesized.
+
+Synthesizing Unit <SubBytes>.
+    Related source file is "f:/dropbox/diploma thesis/ise projects/iterative/project_v6/__source/subbytes.vhd".
+    Summary:
+	no macro.
+Unit <SubBytes> synthesized.
+
+Synthesizing Unit <S_Box>.
+    Related source file is "f:/dropbox/diploma thesis/ise projects/iterative/project_v6/__source/s_box.vhd".
+    Found 256x8-bit Read Only RAM for signal <output>
+    Summary:
+	inferred   1 RAM(s).
+Unit <S_Box> synthesized.
+
+Synthesizing Unit <ShiftRows>.
+    Related source file is "f:/dropbox/diploma thesis/ise projects/iterative/project_v6/__source/shiftrows.vhd".
+    Summary:
+	no macro.
+Unit <ShiftRows> synthesized.
+
+Synthesizing Unit <MixColumns>.
+    Related source file is "f:/dropbox/diploma thesis/ise projects/iterative/project_v6/__source/mixcolumns.vhd".
+    Summary:
+Unit <MixColumns> synthesized.
+
+Synthesizing Unit <Xtime>.
+    Related source file is "f:/dropbox/diploma thesis/ise projects/iterative/project_v6/__source/xtime.vhd".
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <Xtime> synthesized.
+
+Synthesizing Unit <AddRoundKey>.
+    Related source file is "f:/dropbox/diploma thesis/ise projects/iterative/project_v6/__source/addroundkey.vhd".
+    Summary:
+Unit <AddRoundKey> synthesized.
+
+Synthesizing Unit <Counter_to_10>.
+    Related source file is "f:/dropbox/diploma thesis/ise projects/iterative/project_v6/__source/counter_to_10.vhd".
+    Found 4-bit register for signal <tmp>.
+    Found 4-bit adder for signal <tmp[3]_GND_15_o_add_1_OUT> created at line 36.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred   4 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <Counter_to_10> synthesized.
+
+Synthesizing Unit <KeySchedule>.
+    Related source file is "f:/dropbox/diploma thesis/ise projects/iterative/project_v6/__source/keyschedule.vhd".
+    Summary:
+Unit <KeySchedule> synthesized.
+
+Synthesizing Unit <Rcon_zero_row>.
+    Related source file is "f:/dropbox/diploma thesis/ise projects/iterative/project_v6/__source/rcon_zero_row.vhd".
+    Found 16x8-bit Read Only RAM for signal <output>
+    Summary:
+	inferred   1 RAM(s).
+Unit <Rcon_zero_row> synthesized.
+
+Synthesizing Unit <MUX_128_2>.
+    Related source file is "f:/dropbox/diploma thesis/ise projects/iterative/project_v6/__source/mux_128_2.vhd".
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <MUX_128_2> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 22
+ 16x128-bit single-port RAM                            : 1
+ 16x8-bit single-port Read Only RAM                    : 1
+ 256x8-bit single-port Read Only RAM                   : 20
+# Adders/Subtractors                                   : 1
+ 4-bit adder                                           : 1
+# Registers                                            : 10
+ 1-bit register                                        : 4
+ 128-bit register                                      : 5
+ 4-bit register                                        : 1
+# Multiplexers                                         : 36
+ 1-bit 2-to-1 multiplexer                              : 16
+ 128-bit 2-to-1 multiplexer                            : 3
+ 4-bit 2-to-1 multiplexer                              : 1
+ 8-bit 2-to-1 multiplexer                              : 16
+# FSMs                                                 : 1
+# Xors                                                 : 38
+ 128-bit xor2                                          : 1
+ 32-bit xor2                                           : 5
+ 8-bit xor2                                            : 16
+ 8-bit xor5                                            : 16
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <Counter_to_10>.
+The following registers are absorbed into counter <tmp>: 1 register on signal <tmp>.
+Unit <Counter_to_10> synthesized (advanced).
+
+Synthesizing (advanced) Unit <KeyScheduleRAM>.
+INFO:Xst:3216 - HDL ADVISOR - LUT implementation is currently selected for the RAM <Mram_RAM>. If you want the register to be removed and the RAM to be implemented as block RAM, please change the RAM implementation style accordingly.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 128-bit                   |          |
+    |     clkA           | connected to signal <CLK>           | rise     |
+    |     weA            | connected to signal <WE>            | high     |
+    |     addrA          | connected to signal <ADDRESS>       |          |
+    |     diA            | connected to signal <INPUT>         |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <KeyScheduleRAM> synthesized (advanced).
+
+Synthesizing (advanced) Unit <Rcon_zero_row>.
+INFO:Xst:3216 - HDL ADVISOR - LUT implementation is currently selected for the RAM <Mram_output>. If you want the register to be removed and the RAM to be implemented as block RAM, please change the RAM implementation style accordingly.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 8-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <input>         |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <output>        |          |
+    -----------------------------------------------------------------------
+Unit <Rcon_zero_row> synthesized (advanced).
+
+Synthesizing (advanced) Unit <S_Box>.
+INFO:Xst:3216 - HDL ADVISOR - LUT implementation is currently selected for the RAM <Mram_output>. If you want the register to be removed and the RAM to be implemented as block RAM, please change the RAM implementation style accordingly.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 8-bit                    |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <input>         |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <output>        |          |
+    -----------------------------------------------------------------------
+Unit <S_Box> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 22
+ 16x128-bit single-port distributed RAM                : 1
+ 16x8-bit single-port distributed Read Only RAM        : 1
+ 256x8-bit single-port distributed Read Only RAM       : 20
+# Counters                                             : 1
+ 4-bit up counter                                      : 1
+# Registers                                            : 644
+ Flip-Flops                                            : 644
+# Multiplexers                                         : 35
+ 1-bit 2-to-1 multiplexer                              : 16
+ 128-bit 2-to-1 multiplexer                            : 3
+ 8-bit 2-to-1 multiplexer                              : 16
+# FSMs                                                 : 1
+# Xors                                                 : 38
+ 128-bit xor2                                          : 1
+ 32-bit xor2                                           : 5
+ 8-bit xor2                                            : 16
+ 8-bit xor5                                            : 16
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+Optimizing FSM <FSM_0> on signal <state[1:9]> with Speed1 encoding.
+--------------------
+ State | Encoding
+--------------------
+ i_0   | 100000000
+ i_1   | 010000010
+ i_2   | 001000100
+ s_0   | 000100110
+ s_0_2 | 000010001
+ s_1   | 000001011
+--------------------
+
+Optimizing unit <Reg_128_EN> ...
+
+Optimizing unit <KeyScheduleRAM> ...
+
+Optimizing unit <Main> ...
+
+Optimizing unit <KeySchedule> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block Main, actual ratio is 3.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 657
+ Flip-Flops                                            : 657
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : Main.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 1846
+#      GND                         : 1
+#      LUT2                        : 45
+#      LUT3                        : 269
+#      LUT4                        : 118
+#      LUT5                        : 54
+#      LUT6                        : 879
+#      MUXF7                       : 320
+#      MUXF8                       : 160
+# FlipFlops/Latches                : 657
+#      FD                          : 132
+#      FDE                         : 512
+#      FDR                         : 8
+#      FDRE                        : 4
+#      FDS                         : 1
+# RAMS                             : 128
+#      RAM32X1S                    : 128
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 259
+#      IBUF                        : 130
+#      OBUF                        : 129
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6vlx75tff784-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             657  out of  93120     0%  
+ Number of Slice LUTs:                 1493  out of  46560     3%  
+    Number used as Logic:              1365  out of  46560     2%  
+    Number used as Memory:              128  out of  16720     0%  
+       Number used as RAM:              128
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:   1753
+   Number with an unused Flip Flop:    1096  out of   1753    62%  
+   Number with an unused LUT:           260  out of   1753    14%  
+   Number of fully used LUT-FF pairs:   397  out of   1753    22%  
+   Number of unique control sets:         8
+
+IO Utilization: 
+ Number of IOs:                         260
+ Number of bonded IOBs:                 260  out of    360    72%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     32     3%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+CLK                                | BUFGP                  | 785   |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 2.372ns (Maximum Frequency: 421.598MHz)
+   Minimum input arrival time before clock: 0.282ns
+   Maximum output required time after clock: 0.562ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'CLK'
+  Clock period: 2.372ns (frequency: 421.598MHz)
+  Total number of paths / destination ports: 31723 / 1824
+-------------------------------------------------------------------------
+Delay:               2.372ns (Levels of Logic = 5)
+  Source:            main3/tmp_124 (FF)
+  Destination:       main3/tmp_11 (FF)
+  Source Clock:      CLK rising
+  Destination Clock: CLK rising
+
+  Data Path: main3/tmp_124 to main3/tmp_11
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q             33   0.280   0.701  main3/tmp_124 (main3/tmp_124)
+     LUT6:I0->O            1   0.053   0.000  main2/en_1_generate_for_each_byte[15].substitute/Mram_output82 (main2/en_1_generate_for_each_byte[15].substitute/Mram_output82)
+     MUXF7:I1->O           1   0.187   0.000  main2/en_1_generate_for_each_byte[15].substitute/Mram_output8_f7_0 (main2/en_1_generate_for_each_byte[15].substitute/Mram_output8_f71)
+     MUXF8:I0->O           6   0.131   0.617  main2/en_1_generate_for_each_byte[15].substitute/Mram_output8_f8 (main2/b0<123>)
+     LUT6:I0->O            1   0.053   0.296  main2/Mmux_m239_SW0 (N496)
+     LUT6:I5->O            1   0.053   0.000  main2/en_6/Mxor_output_108_xo<0>1 (w2<19>)
+     FDE:D                    -0.012          main3/tmp_19
+    ----------------------------------------
+    Total                      2.372ns (0.757ns logic, 1.615ns route)
+                                       (31.9% logic, 68.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'CLK'
+  Total number of paths / destination ports: 130 / 130
+-------------------------------------------------------------------------
+Offset:              0.282ns (Levels of Logic = 1)
+  Source:            DATA_WRITE (PAD)
+  Destination:       reg_DATA_WRITE (FF)
+  Destination Clock: CLK rising
+
+  Data Path: DATA_WRITE to reg_DATA_WRITE
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   0.003   0.279  DATA_WRITE_IBUF (DATA_WRITE_IBUF)
+     FD:D                     -0.012          reg_DATA_WRITE
+    ----------------------------------------
+    Total                      0.282ns (0.003ns logic, 0.279ns route)
+                                       (1.1% logic, 98.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK'
+  Total number of paths / destination ports: 129 / 129
+-------------------------------------------------------------------------
+Offset:              0.562ns (Levels of Logic = 1)
+  Source:            ouput_reg/tmp_0 (FF)
+  Destination:       OUTPUT_TEXT<0> (PAD)
+  Source Clock:      CLK rising
+
+  Data Path: ouput_reg/tmp_0 to OUTPUT_TEXT<0>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              1   0.280   0.279  ouput_reg/tmp_0 (ouput_reg/tmp_0)
+     OBUF:I->O                 0.003          OUTPUT_TEXT_0_OBUF (OUTPUT_TEXT<0>)
+    ----------------------------------------
+    Total                      0.562ns (0.283ns logic, 0.279ns route)
+                                       (50.3% logic, 49.7% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock CLK
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK            |    2.372|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 10.00 secs
+Total CPU time to Xst completion: 9.80 secs
+ 
+--> 
+
+Total memory usage is 289496 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    4 (   0 filtered)
+

@@ -1,0 +1,139 @@
+Release 13.4 par O.87xd (nt64)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+
+ALEXEY-PC::  Wed Mar 07 15:44:32 2012
+
+par -w -intstyle ise -ol high -xe c -mt 4 Main_map.ncd Main.ncd Main.pcf 
+
+
+Constraints file: Main.pcf.
+Loading device for application Rf_Device from file '5vlx30.nph' in environment C:\Xilinx\13.4\ISE_DS\ISE\.
+   "Main" is an NCD, version 3.2, device xc5vlx30, package ff676, speed -3
+INFO:Par:338 - 
+   Extra Effort Level "c"ontinue is not a runtime optimized effort level. It is intended to be used for designs that are
+   not meeting timing but where the designer wants the tools to continue iterating on the design until no further design
+   speed improvements are possible.  This can result in very long runtimes since the tools will continue improving the
+   design even if the time specs can not be met. If you are looking for the best possible design speed available from a
+   long but reasonable runtime use Extra Effort Level "n"ormal.  It will stop iterating on the design when the design
+   speed improvements have shrunk to the point that the time specs are not expected to be met.
+
+Initializing temperature to 85.000 Celsius. (default - Range: 0.000 to 85.000 Celsius)
+Initializing voltage to 0.950 Volts. (default - Range: 0.950 to 1.050 Volts)
+
+
+Device speed data version:  "PRODUCTION 1.73 2012-01-07".
+
+
+
+Device Utilization Summary:
+
+   Number of BUFGs                           1 out of 32      3%
+   Number of External IOBs                 260 out of 400    65%
+      Number of LOCed IOBs                   0 out of 260     0%
+
+   Number of Slices                        365 out of 4800    7%
+   Number of Slice Registers               537 out of 19200   2%
+      Number used as Flip Flops            537
+      Number used as Latches                 0
+      Number used as LatchThrus              0
+
+   Number of Slice LUTS                   1301 out of 19200   6%
+   Number of Slice LUT-Flip Flop pairs    1403 out of 19200   7%
+
+
+Overall effort level (-ol):   High 
+Router effort level (-rl):    High 
+
+PAR will use up to 4 processors
+Starting Multi-threaded Router
+
+
+Phase  1  : 7807 unrouted;      REAL time: 4 secs 
+
+Phase  2  : 7491 unrouted;      REAL time: 4 secs 
+
+Phase  3  : 2025 unrouted;      REAL time: 8 secs 
+
+Phase  4  : 2335 unrouted; (Setup:36, Hold:0, Component Switching Limit:0)     REAL time: 9 secs 
+
+Updating file: Main.ncd with current fully routed design.
+
+Phase  5  : 0 unrouted; (Setup:409, Hold:0, Component Switching Limit:0)     REAL time: 10 secs 
+
+Phase  6  : 0 unrouted; (Setup:62, Hold:0, Component Switching Limit:0)     REAL time: 11 secs 
+
+Phase  7  : 0 unrouted; (Setup:18, Hold:0, Component Switching Limit:0)     REAL time: 14 secs 
+
+Phase  8  : 0 unrouted; (Setup:18, Hold:0, Component Switching Limit:0)     REAL time: 14 secs 
+
+Updating file: Main.ncd with current fully routed design.
+
+Phase  9  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 18 secs 
+
+Phase 10  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 18 secs 
+
+Phase 11  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 18 secs 
+
+Phase 12  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 18 secs 
+Total REAL time to Router completion: 18 secs 
+Total CPU time to Router completion (all processors): 22 secs 
+
+Generating "PAR" statistics.
+
+**************************
+Generating Clock Report
+**************************
+
++---------------------+--------------+------+------+------------+-------------+
+|        Clock Net    |   Resource   |Locked|Fanout|Net Skew(ns)|Max Delay(ns)|
++---------------------+--------------+------+------+------------+-------------+
+|           CLK_BUFGP | BUFGCTRL_X0Y0| No   |  182 |  0.142     |  1.411      |
++---------------------+--------------+------+------+------------+-------------+
+
+* Net Skew is the difference between the minimum and maximum routing
+only delays for the net. Note this is different from Clock Skew which
+is reported in TRCE timing report. Clock Skew is the difference between
+the minimum and maximum path delays which includes logic delays.
+
+* The fanout is the number of component pins not the individual BEL loads,
+for example SLICE loads not FF loads.
+
+Timing Score: 0 (Setup: 0, Hold: 0, Component Switching Limit: 0)
+
+Asterisk (*) preceding a constraint indicates it was not met.
+   This may be due to a setup or hold violation.
+
+----------------------------------------------------------------------------------------------------------
+  Constraint                                |    Check    | Worst Case |  Best Case | Timing |   Timing   
+                                            |             |    Slack   | Achievable | Errors |    Score   
+----------------------------------------------------------------------------------------------------------
+  TS_CLK = PERIOD TIMEGRP "CLK" 4.1 ns HIGH | SETUP       |     0.023ns|     4.077ns|       0|           0
+   50%                                      | HOLD        |     0.346ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+
+
+All constraints were met.
+
+
+Generating Pad Report.
+
+All signals are completely routed.
+
+Total REAL time to PAR completion: 19 secs 
+Total CPU time to PAR completion (all processors): 23 secs 
+
+Peak Memory Usage:  435 MB
+
+Placer: Placement generated during map.
+Routing: Completed - No errors found.
+Timing: Completed - No errors found.
+
+Number of error messages: 0
+Number of warning messages: 0
+Number of info messages: 1
+
+Writing design to file Main.ncd
+
+
+
+PAR done!
