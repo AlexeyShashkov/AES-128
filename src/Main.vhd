@@ -31,7 +31,7 @@ architecture Main_architecture of Main is
     component KeyScheduleRAM
         port (CLK     : in  std_logic;
               WE      : in  std_logic;
-              ADDRESS : in  std_logic_vector (3 downto 0);
+              ADDRESS : in  std_logic_vector(3 downto 0);
               INPUT   : in  std_logic_vector(0 to 127);
               OUTPUT  : out std_logic_vector(0 to 127));
     end component;
